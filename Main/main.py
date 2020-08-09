@@ -1,20 +1,11 @@
-from bs4 import BeautifulSoup
-import requests
+from selenium import webdriver
 
+PATH='geckodriver.exe'
 
-page=requests.get('https://www.indiatoday.in/')
-soup = BeautifulSoup(page.content,'html.parser')
+options=webdriver.FirefoxOptions()
+options.add_argument('-headless')
 
+driver=webdriver.Firefox(executable_path=PATH,options=options)
+driver.get('https://timesofindia.indiatimes.com')
 
-PATH='Main/geckodriver.exe'
-
-def main_news():
-    
-    headlines = soup.find(class_="home-page-feature-1708626").get_text()
-    #print(headlines)
-    top_stories=soup.find(class_="widget-wrapper top_stories_ordering").get_text()
-    
-    print(top_stories)
-    
-
-main_news()
+print('--suc')
