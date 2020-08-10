@@ -15,4 +15,9 @@
  2. Mozilla Firefox (browser--latest version)
  
  # Installation
- 
+```
+pip install selenium
+```
+```
+pip install secure-smtplib
+```
