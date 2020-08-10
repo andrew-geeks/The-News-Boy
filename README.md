@@ -26,6 +26,7 @@ Times of India:<https://timesofindia.indiatimes.com/>
 
 # Mailing 
 >Sometimes the received may be on the junk folder. Please have a look on it.
+
 >As of now mails can be sent only from Gmail.
 
 # About & Contact
