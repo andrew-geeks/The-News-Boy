@@ -1,6 +1,7 @@
 from selenium import webdriver
 import smtplib
 
+
 PATH='Main/geckodriver.exe'
 
 options=webdriver.FirefoxOptions()
@@ -23,22 +24,21 @@ except:
     pass
 
 print('--scrap_complete')
-for i in range(len(top_stories)):
-    print(top_stories[i])
+
+
 def send():
-    content='hello'
+    SUBJECT='The News Boy!'
+    BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
+    for n in range(len(top_stories)):
+        BODY=BODY+top_stories[n]
+    message = 'Subject: {}\n\n{}'.format(SUBJECT, BODY).encode('utf-8')
     mail=smtplib.SMTP('smtp.gmail.com',587)
     mail.ehlo()
     mail.starttls()
-    mail.login('yourgmail','gmail_password')
-    subject='The News Boy!'
-    body='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
-
-    for n in range(len(top_stories)):
-        body=body+top_stories[n]
-
-    msg=f'Subject: {subject}\n\n{body}'
-    mail.sendmail('yourgmail','recipient_mail',msg)
+    mail.ehlo()
+    mail.login('your_gmail','gmail_password')
+   
+    mail.sendmail('your_gmail','recipient_email_address',message)
     mail.close()
     print('mailing complete!')
 
