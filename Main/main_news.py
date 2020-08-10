@@ -41,12 +41,10 @@ def india_today(): #India_Today
             
     except:
         pass
-
+    print('--scrap_complete')
     for i in range(len(top_stories)):
         print(top_stories[i])
    
-
-
 
 
 india_today()
