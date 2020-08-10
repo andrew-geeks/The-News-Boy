@@ -8,25 +8,50 @@ options=webdriver.FirefoxOptions()
 options.add_argument('-headless')
 
 driver=webdriver.Firefox(executable_path=PATH,options=options)
-driver.get('https://timesofindia.indiatimes.com')
-print('driver_optimized')
-headlines=driver.find_element_by_xpath('//*[@id="featuredstory"]/h2/a').text
+
+headlines=''
 top_stories=[]
 
-i=1
-try:
-    while True:
-        stry=driver.find_element_by_xpath('//*[@id="content"]/div/div[6]/ul/li['+str(i)+']/a[1]').text
-        top_stories.append('\n'+str(i)+'. '+stry)
-        i=i+1
-        
-except:
-    pass
 
-print('--scrap_complete')
+def TOI(): #Times_of_India
+    driver.get('https://timesofindia.indiatimes.com')
+    print('driver_optimized')
+    headlines=driver.find_element_by_xpath('//*[@id="featuredstory"]/h2/a').text
+    
+    i=1
+    try:
+        while True:
+            stry=driver.find_element_by_xpath('//*[@id="content"]/div/div[6]/ul/li['+str(i)+']/a[1]').text
+            top_stories.append('\n'+str(i)+'. '+stry)
+            i=i+1    
+    except:
+        pass
+    print('--scrap_complete')
 
 
-def send():
+def india_today(): #India_Today
+    driver.get('https://www.indiatoday.in/')
+    print('driver_optimized')
+    headlines=driver.find_element_by_xpath('//*[@id="block-itg-widget-home-page-feature"]/div/div[1]/h2/a').text
+    
+    try:
+        for i in range(1,6):
+            stry=driver.find_element_by_xpath('//*[@id="block-itg-widget-top-stories-ordering"]/ul/li['+str(i)+']/a').text
+            top_stories.append(str(i)+'. '+stry+'\n')
+            
+    except:
+        pass
+
+    for i in range(len(top_stories)):
+        print(top_stories[i])
+   
+
+
+
+
+india_today()
+
+def send(): #mailing_function
     SUBJECT='The News Boy!'
     BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
     for n in range(len(top_stories)):
@@ -42,4 +67,4 @@ def send():
     mail.close()
     print('mailing complete!')
 
-send()
+#send()
