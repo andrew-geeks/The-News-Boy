@@ -23,7 +23,9 @@ driver=webdriver.Firefox(executable_path=PATH,options=options)
 def TOI(): #Times_of_India
     global top_stories
     global headlines
+    global news_name
     top_stories=[]
+    news_name='TimesOfIndia'
     driver.get('https://timesofindia.indiatimes.com')
     print('driver_optimized')
     headlines=driver.find_element_by_xpath('//*[@id="featuredstory"]/h2/a').text
@@ -42,6 +44,8 @@ def TOI(): #Times_of_India
 def india_today(): #India_Today
     global top_stories
     global headlines
+    global news_name
+    news_name='IndiaToday'
     top_stories=[]
     driver.get('https://www.indiatoday.in/')
     print('driver_optimized')
@@ -59,10 +63,12 @@ def india_today(): #India_Today
 def indian_express(): #Indian_Express
     global top_stories
     global headlines
+    global news_name
+    news_name='IndianExpress'
     top_stories=[]
     driver.get('https://indianexpress.com')
     print('driver_optimized')
-    headlines=driver.find_element_by_xpath('//*[@id="HP_TOP_NEWS_STORIES"]/div[1]/div/div[2]/h2/a').text
+    headlines=driver.find_element_by_xpath('//*[@id="HP_TOP_NEWS_STORIES"]/div[1]/div[1]/div[1]/h2/a').text
     try:
         for i in range(1,6):
             stry=driver.find_element_by_xpath('//*[@id="HP_TOP_NEWS_STORIES"]/div[2]/div/ul/li['+str(i)+']/h3/a').text
@@ -73,10 +79,8 @@ def indian_express(): #Indian_Express
 
 
 
-
-
 def send(): #mailing_function
-    SUBJECT='The News Boy!'
+    SUBJECT='The News Boy! '+news_name
     BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
     for n in range(len(top_stories)):
         BODY=BODY+top_stories[n]
@@ -85,10 +89,12 @@ def send(): #mailing_function
     mail.ehlo()
     mail.starttls()
     mail.ehlo()
-    mail.login('your_gmail','your_gmail_password')
+    mail.login('socialbirdyt@gmail.com','Sasi@1234')
    
-    mail.sendmail('your_gmail','receipient_email',message)
+    mail.sendmail('socialbird@gmail.com','andrewgeorgeissac@gmail.com',message)
     mail.close()
     print('mailing complete!')
 
 
+indian_express()
+send()
