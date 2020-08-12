@@ -89,12 +89,13 @@ def send(): #mailing_function
     mail.ehlo()
     mail.starttls()
     mail.ehlo()
-    mail.login('socialbirdyt@gmail.com','Sasi@1234')
+    mail.login('your_gmail','your_gmail_password')
    
-    mail.sendmail('socialbird@gmail.com','andrewgeorgeissac@gmail.com',message)
+    mail.sendmail('your_gmail','reciepient_mail_address',message)
     mail.close()
     print('mailing complete!')
 
 
-indian_express()
+
+india_today()
 send()
