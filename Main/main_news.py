@@ -84,6 +84,7 @@ def send(): #mailing_function
     BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
     for n in range(len(top_stories)):
         BODY=BODY+top_stories[n]
+    BODY=BODY+'\n'+'\n'+'With Love,'+'\n'+'NewsBoy_Initiative(By Andrew)'
     message = 'Subject: {}\n\n{}'.format(SUBJECT, BODY).encode('utf-8')
     mail=smtplib.SMTP('smtp.gmail.com',587)
     mail.ehlo()
@@ -97,5 +98,5 @@ def send(): #mailing_function
 
 
 
-india_today()
+indian_express()
 send()
