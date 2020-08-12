@@ -6,6 +6,11 @@
  
  All releases can be found at the releases page!
  
+ # Updates
+ >Two new news websites added
+ 
+ > Email content redefined!
+ 
  # Libraries Used
  1. Selenium
  2. smtplib 
@@ -23,6 +28,10 @@ pip install secure-smtplib
 ```
 # Data
 Times of India:<https://timesofindia.indiatimes.com/>
+
+IndiaToday: <https://www.indiatoday.in/>
+
+IndianExpress: <https://indianexpress.com>
 
 # Mailing 
 >Sometimes the mail received may be on the junk folder. Please have a look on it.
