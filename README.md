@@ -2,7 +2,7 @@
  The News Boy is a python program to send Email of latest news & top-stories scrapped from various sites to a particular person! It uses geckodriver to access the websites
  
  # Releases 
- Latest Release: v1.0
+ Latest Release: v1.0.1
  
  All releases can be found at the releases page!
  
