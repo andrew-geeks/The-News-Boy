@@ -5,6 +5,7 @@
 
 # RUN THE NEWS FUNCTION WHICH YOU LIKE & THEN RUN THE MAILING FUNCTION!
 
+#NOTE: IT TAKES UPTO 40-50sec TO COMPLETE THE PROCESS OF SCRACPING & SENDING
 #COMMENT YOUR SUGGESTIONS, DOUBTS, PROBLEMS @ GitHub
 
 
@@ -83,7 +84,7 @@ def indian_express(): #Indian_Express
 
 
 
-def send(): #mailing_function
+def gmail_send(): #gmail_function
     SUBJECT='The News Boy! '+news_name
     BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
     for n in range(len(top_stories)):
@@ -101,6 +102,24 @@ def send(): #mailing_function
     print('mailing complete!')
 
 
+def outlook_send():#outlook_function
+    SUBJECT='The News Boy! '+news_name
+    BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
+    for n in range(len(top_stories)):
+        BODY=BODY+top_stories[n]
+    BODY=BODY+'\n'+'\n'+'With Love,'+'\n'+'NewsBoy_Initiative(By Andrew)'
+    message = 'Subject: {}\n\n{}'.format(SUBJECT, BODY).encode('utf-8')
+    mail=smtplib.SMTP('smtp-mail.outlook.com',587)
+    mail.ehlo()
+    mail.starttls()
+    mail.ehlo()
+    mail.login('your_outlook_mail','your_outlook_mail_password')
+   
+    mail.sendmail('your_outlook_mail','recipient_email_address',message)
+    mail.close()
+    print('mailing complete!')
 
-indian_express()
-send()
+
+
+india_today()
+outlook_send()
