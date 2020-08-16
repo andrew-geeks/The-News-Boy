@@ -10,7 +10,7 @@
  # Updates
  >Two new news websites added
  
- > Email content redefined!
+ > Outlook mail provision added!
  
  # Libraries Used
  1. Selenium
