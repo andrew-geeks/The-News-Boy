@@ -84,7 +84,7 @@ def indian_express(): #Indian_Express
 
 
 
-def gmail_send(): #gmail_function
+def gmail_send():  #gmail_function
     SUBJECT='The News Boy! '+news_name
     BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
     for n in range(len(top_stories)):
@@ -96,13 +96,12 @@ def gmail_send(): #gmail_function
     mail.starttls()
     mail.ehlo()
     mail.login('your_gmail','your_gmail_password')
-   
     mail.sendmail('your_gmail','reciepient_mail_address',message)
     mail.close()
     print('mailing complete!')
 
 
-def outlook_send():#outlook_function
+def outlook_send():  #outlook_function
     SUBJECT='The News Boy! '+news_name
     BODY='Breaking News:'+headlines+'\n'+'\n--Top Stories--\n'
     for n in range(len(top_stories)):
