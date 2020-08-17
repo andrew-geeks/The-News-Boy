@@ -8,13 +8,15 @@
  All releases can be found at the releases page!
  
  # Updates
- >Two new news websites added
+ >New feature: Podcasts
  
  > Outlook mail provision added!
  
  # Libraries Used
  1. Selenium
  2. smtplib 
+ 3. BeautifulSoup
+ 4. gtts
  
  # Driver & Browser
  1. Geckodriver (driver)
@@ -27,12 +29,21 @@ pip install selenium
 ```
 pip install secure-smtplib
 ```
+```
+pip install gTTS
+```
+```
+pip install beautifulsoup4
+```
+
 # Data
 Times of India:<https://timesofindia.indiatimes.com/>
 
 IndiaToday: <https://www.indiatoday.in/>
 
 IndianExpress: <https://indianexpress.com>
+
+BloombergQuint: <https://www.bloombergquint.com>
 
 # Mailing 
 >Sometimes the mail received may be on the junk folder. Please have a look on it.
