@@ -1,5 +1,5 @@
 # The News Boy 
- The News Boy is a python program to send Email of latest news & top-stories scrapped from various sites to a particular person! It uses geckodriver to access the websites.
+ The News Boy is a python program to send Email of latest news & top-stories scrapped from various sites, create podcasts from scrapped data, and many more! It uses geckodriver, BeautifulSoup to access the websites.
  
  [![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)](https://travis-ci.org/dwyl/esta) ![Known Vulnerabilities](https://snyk.io/test/github/dwyl/hapi-auth-jwt2/badge.svg?targetFile=package.json) ![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/dwyl/hapi-auth-jwt2.svg?maxAge=2592000)
  # Releases 
