@@ -1,3 +1,17 @@
+# CREATED BY ANDREW GEORGE ISSAC
+
+#HOW TO USE?
+# >RUN THE FUNCTION OF NEWS OF YOUR CHOICE.
+# >WAIT FOR THE PODCAST FILE TO OPEN!
+ 
+#NOTE_1: IT TAKES UPTO 5-7sec TO COMPLETE THE PROCESS OF SCRACPING & OPENING THE PODCAST FILE
+#NOTE-2: THE PODCAST WILL BE SAVED ON THE SAME FOLDER WHERE THIS .py FILE IS LOCATED.
+#NOTE-3: AFTER GETTING DATA, THE PODCAST WILL BE SAVED & OPENED AUTOMATICALLY. NOTHING TO DO MANUALLY!
+
+
+#COMMENT YOUR SUGGESTIONS/DOUBTS/PROBLEMS @ GitHub
+
+
 from gtts import gTTS
 import os
 from bs4 import BeautifulSoup 
@@ -24,7 +38,7 @@ def blmg_qnt(): #bloomberg_quint
     os.system('start podcast.mp3')
 
 
-def India_Today(): 
+def India_Today(): #India_Today
     lang='en'
     page=requests.get('https://www.indiatoday.in')
     soup = BeautifulSoup(page.content,'html.parser')
@@ -34,7 +48,7 @@ def India_Today():
     os.system('start podcast.mp3')
 
 
-def Ind_Exprs():
+def Ind_Exprs(): #Indian_Express
     lang='en'
     page=requests.get('https://indianexpress.com/')
     soup = BeautifulSoup(page.content,'html.parser')
@@ -43,5 +57,3 @@ def Ind_Exprs():
     output.save('podcast.mp3')
     os.system('start podcast.mp3')
 
-
-Ind_Exprs()
