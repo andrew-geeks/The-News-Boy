@@ -3,7 +3,7 @@
  
  [![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)](https://travis-ci.org/dwyl/esta) ![Known Vulnerabilities](https://snyk.io/test/github/dwyl/hapi-auth-jwt2/badge.svg?targetFile=package.json) ![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/dwyl/hapi-auth-jwt2.svg?maxAge=2592000)
  # Releases 
- Latest Release: v1.0.1
+ Latest Release: v1.1.0
  
  All releases can be found at the releases page!
  
