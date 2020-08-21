@@ -15,7 +15,7 @@ from selenium import webdriver
 import smtplib
 
 
-PATH='Main/geckodriver.exe'
+PATH="Mailing_news/geckodriver.exe"
 
 options=webdriver.FirefoxOptions()
 options.add_argument('-headless')
@@ -120,5 +120,4 @@ def outlook_send():  #outlook_function
 
 
 
-india_today()
-outlook_send()
+
