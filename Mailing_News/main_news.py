@@ -6,6 +6,7 @@
 # RUN THE NEWS FUNCTION WHICH YOU LIKE & THEN RUN THE MAILING FUNCTION!
 
 #NOTE: IT TAKES UPTO 40-50sec TO COMPLETE THE PROCESS OF SCRACPING & SENDING.
+#NOTE: THE RECIEPIENT MAIL ADDRESS CAN BE ANY MAIL FROM ANY PROVIDER!
 #COMMENT YOUR SUGGESTIONS, DOUBTS, PROBLEMS @ GitHub
 
 
@@ -96,7 +97,7 @@ def gmail_send():  #gmail_function
     mail.starttls()
     mail.ehlo()
     mail.login('your_gmail','your_gmail_password')
-    mail.sendmail('your_gmail','reciepient_mail_address',message)
+    mail.sendmail('your_gmail','receipient_mail_address',message)
     mail.close()
     print('mailing complete!')
 
@@ -113,11 +114,11 @@ def outlook_send():  #outlook_function
     mail.starttls()
     mail.ehlo()
     mail.login('your_outlook_mail','your_outlook_mail_password')
-   
     mail.sendmail('your_outlook_mail','recipient_email_address',message)
     mail.close()
     print('mailing complete!')
 
 
 
-
+TOI()
+gmail_send()
