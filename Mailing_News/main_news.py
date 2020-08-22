@@ -23,6 +23,9 @@ options.add_argument('-headless')
 
 driver=webdriver.Firefox(executable_path=PATH,options=options)
 
+headlines=''
+top_stories=[]
+news_name=''
 
 
 def TOI(): #Times_of_India
