@@ -8,7 +8,7 @@
  All releases can be found at the releases page!
  
  # Updates
- >New feature: Podcasts
+ >New feature: Business news
  
  > Outlook mail provision added!
  
