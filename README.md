@@ -39,6 +39,8 @@ pip install beautifulsoup4
 # Data
 Times of India:<https://timesofindia.indiatimes.com/>
 
+Times of India(Business): <https://timesofindia.indiatimes.com/business/india-business>
+
 IndiaToday: <https://www.indiatoday.in/>
 
 IndianExpress: <https://indianexpress.com>
