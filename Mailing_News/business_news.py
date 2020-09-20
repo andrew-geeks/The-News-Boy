@@ -61,8 +61,8 @@ def gmail_send():  #gmail_function
     mail.ehlo()
     mail.starttls()
     mail.ehlo()
-    mail.login('your_gmail','your_gmail_password')
-    mail.sendmail('your_gmail','reciepient_mail_address',message)
+    mail.login('your_gmail_mail','your_gmail_mail_password')
+    mail.sendmail('your_gmail_mail','recipient_mail_address',message)
     mail.close()
     print('mailing complete!')
 
